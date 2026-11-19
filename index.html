@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Compare monthly and yearly plans for Meadowdesk, a fictional project planning workspace.">
+  <meta name="theme-color" content="#faf9ff">
+  <title>Meadowdesk | Plans and pricing</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="pricing.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#pricing">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        Meadowdesk
+      </a>
+      <span class="demo-label">Pricing demo</span>
+    </div>
+  </header>
+
+  <main class="shell">
+    <section id="pricing" class="pricing" aria-labelledby="pricing-title">
+      <div class="pricing-intro">
+        <h1 id="pricing-title">Choose your workspace plan</h1>
+        <p>Plan projects, track deadlines, and keep your team in one place.</p>
+        <div class="billing-controls">
+          <div class="billing-switch" role="group" aria-label="Billing period">
+            <button type="button" class="is-active" data-period="monthly" aria-pressed="true">Monthly</button>
+            <button type="button" data-period="yearly" aria-pressed="false">Yearly</button>
+          </div>
+          <span class="savings">Save 20% yearly</span>
+        </div>
+        <p id="billing-status" class="sr-only" role="status" aria-atomic="true"></p>
+      </div>
+
+      <div class="plan-grid">
+        <article class="plan" id="starter" aria-labelledby="starter-title">
+          <div class="plan-header">
+            <h2 id="starter-title">Starter</h2>
+            <p>For solo work and simple projects.</p>
+          </div>
+          <p class="plan-price">
+            <span class="price-amount" data-monthly="500" data-yearly="4800">₹500</span>
+            <span class="price-unit">per month</span>
+          </p>
+          <button class="choose-plan" type="button">Choose Starter</button>
+          <ul class="features" aria-label="Starter features">
+            <li>5 active projects</li>
+            <li>1 workspace member</li>
+            <li>Board and list views</li>
+            <li>1 GB of file storage</li>
+            <li>Email support</li>
+          </ul>
+        </article>
+
+        <article class="plan plan--popular" id="pro" aria-labelledby="pro-title">
+          <span class="ribbon">Popular</span>
+          <div class="plan-header">
+            <h2 id="pro-title">Pro</h2>
+            <p>For small teams juggling multiple projects.</p>
+          </div>
+          <p class="plan-price">
+            <span class="price-amount" data-monthly="1250" data-yearly="12000">₹1,250</span>
+            <span class="price-unit">per month</span>
+          </p>
+          <button class="choose-plan" type="button">Choose Pro</button>
+          <ul class="features" aria-label="Pro features">
+            <li>Unlimited active projects</li>
+            <li>Up to 10 workspace members</li>
+            <li>Board, list, and timeline views</li>
+            <li>25 GB of file storage</li>
+            <li>Priority email support</li>
+          </ul>
+        </article>
+
+        <article class="plan" id="team" aria-labelledby="team-title">
+          <div class="plan-header">
+            <h2 id="team-title">Team</h2>
+            <p>For teams working across departments.</p>
+          </div>
+          <p class="plan-price">
+            <span class="price-amount" data-monthly="2500" data-yearly="24000">₹2,500</span>
+            <span class="price-unit">per month</span>
+          </p>
+          <button class="choose-plan" type="button">Choose Team</button>
+          <ul class="features" aria-label="Team features">
+            <li>Unlimited active projects</li>
+            <li>Up to 30 workspace members</li>
+            <li>Timeline views and reports</li>
+            <li>100 GB of file storage</li>
+            <li>Priority chat and email support</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell site-footer">
+    <p>All prices are in INR. Meadowdesk is a fictional product.</p>
+  </footer>
+
+  <dialog id="plan-preview" aria-labelledby="preview-title" aria-describedby="preview-price">
+    <p class="preview-label">Demo selection</p>
+    <h2 id="preview-title"></h2>
+    <p id="preview-price"></p>
+    <form method="dialog">
+      <button class="choose-plan" type="submit" autofocus>Back to plans</button>
+    </form>
+  </dialog>
+</body>
+</html>
